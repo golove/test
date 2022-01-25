@@ -16,3 +16,5 @@ interface ImportMetaEnv {
    */
   VITE_DEV_SERVER_URL: undefined | string;
 }
+
+declare module 'sqlite3'

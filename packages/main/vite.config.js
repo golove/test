@@ -32,6 +32,7 @@ const config = {
       external: [
         'electron',
         'electron-devtools-installer',
+        'sqlite3',
         ...builtinModules,
       ],
       output: {

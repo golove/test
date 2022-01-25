@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-const msg = ref('');
+import { reactive } from 'vue';
+const msg = reactive([]);
 
 function sendMsg(){
 window.ipcRenderer.send('renderMsg','ping');
  window.ipcRenderer.on('mainMsg',(e,a)=>{
-    msg.value = a;
+    msg.push(a);
   });
 }
 </script>

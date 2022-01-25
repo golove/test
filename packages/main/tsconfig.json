@@ -7,7 +7,7 @@
     "skipLibCheck": true,
     "strict": true,
     "isolatedModules": true,
-
+    "allowSyntheticDefaultImports": true,
     // Don't automatically include anything.
     // Only include `@types` packages that we need to import.
     "types" : [],

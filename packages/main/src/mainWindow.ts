@@ -1,6 +1,7 @@
 import {BrowserWindow, ipcMain} from 'electron';
 import {join} from 'path';
 import {URL} from 'url';
+import {spider} from '/@/spider/spider'
 
 async function createWindow() {
   const browserWindow = new BrowserWindow({
@@ -26,12 +27,18 @@ async function createWindow() {
     }
   });
 
+
+  const url = 'http://x11.7086xx.work/pw/thread.php?fid=14'
+
+
+
   /**
    * linsten ipcRenderer event from render process
    */
    ipcMain.on('renderMsg',(event,arg)=>{
-    console.log(arg);
-    event.sender.send('mainMsg','pong');
+    spider(url,'Beauty',true,event)
+    // console.log(arg);
+    // event.sender.send('mainMsg','pong');
   });
 
 

@@ -46,7 +46,9 @@
     "vue-tsc": "0.30.2"
   },
   "dependencies": {
+    "@types/request": "^2.48.8",
     "electron-updater": "4.6.5",
+    "sqlite3": "^5.0.2",
     "vue": "3.2.26"
   }
 }

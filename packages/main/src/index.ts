@@ -3,9 +3,6 @@ import './security-restrictions';
 import {restoreOrCreateWindow} from '/@/mainWindow';
 
 
-/**
- * Prevent multiple instances
- */
 const isSingleInstance = app.requestSingleInstanceLock();
 if (!isSingleInstance) {
   app.quit();
@@ -36,10 +33,12 @@ app.whenReady()
   .then(restoreOrCreateWindow)
   .catch((e) => console.error('Failed create window:', e));
 
-
+// doSpider('http://x11.7086xx.work/pw/thread.php?fid=14','beauty',true)
 /**
  * Install Vue.js or some other devtools in development mode only
  */
+
+
 if (import.meta.env.DEV) {
   app.whenReady()
     .then(() => import('electron-devtools-installer'))
